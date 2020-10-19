@@ -87,7 +87,7 @@
                        </div>
                     </div>
                     <div class="row mt-3">
-                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your  Email: </label>
+                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your  Email Here: </label>
                        <div class="col-lg-8">
                           <input type="email" name="email" id="email" placeholder="aluwani@smaholdings.co.za" class="form-control"/>
                           <em class="help-block">Please enter your email</em>
@@ -95,7 +95,7 @@
                     </div>
                     
                     <div class="row mt-3">
-                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your query: </label>
+                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your query Here: </label>
                        <div class="col-lg-8">
                           <textarea name="message" id="message" placeholder="type your query here" class="form-control"></textarea>
                           <em class="help-block">Please enter your query here</em>
