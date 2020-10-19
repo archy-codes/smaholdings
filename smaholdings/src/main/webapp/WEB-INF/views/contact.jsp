@@ -82,12 +82,12 @@
                     <div class="row mt-3">
                        <label class="control-label text-center col-lg-4" for="firtname">Enter Your Last Name: </label>
                        <div class="col-lg-8">
-                          <input type="text" name="firstName" id="firstName" placeholder="Enter first Name here" class="form-control"/>
+                          <input type="text" name="firstName" id="firstName" placeholder="Enter Last Name here" class="form-control"/>
                           <em class="help-block">Please enter your last name</em>
                        </div>
                     </div>
                     <div class="row mt-3">
-                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your First Email: </label>
+                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your  Email: </label>
                        <div class="col-lg-8">
                           <input type="email" name="email" id="email" placeholder="aluwani@smaholdings.co.za" class="form-control"/>
                           <em class="help-block">Please enter your email</em>
@@ -95,10 +95,10 @@
                     </div>
                     
                     <div class="row mt-3">
-                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your First Name: </label>
+                       <label class="control-label text-center col-lg-4" for="firtname">Enter Your query: </label>
                        <div class="col-lg-8">
                           <textarea name="message" id="message" placeholder="type your query here" class="form-control"></textarea>
-                          <em class="help-block">Please enter your query</em>
+                          <em class="help-block">Please enter your query here</em>
                        </div>
                     </div>
                     
