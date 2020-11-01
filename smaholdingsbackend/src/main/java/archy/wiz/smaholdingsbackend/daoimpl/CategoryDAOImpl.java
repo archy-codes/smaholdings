@@ -1,79 +1,86 @@
 package archy.wiz.smaholdingsbackend.daoimpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import archy.wiz.smaholdingsbackend.dao.CategoryDAO;
 import archy.wiz.smaholdingsbackend.dto.Category;
 
+
 @Repository("categoryDAO")
+@Transactional
 public class CategoryDAOImpl implements CategoryDAO {
 
-	private static List<Category> categories = new ArrayList<>();
+	@Autowired
+	private SessionFactory sessionFactory;
 	
-	static {
-		Category category = new Category();
-		category.setId(1);
-		category.setName("ENGENEERING");
-		category.setDescription("all engeneering work");
-		category.setImageUrl("CAT_1.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(2);
-		category.setName("LOGISTICS");
-		category.setDescription("all logistics work");
-		category.setImageUrl("CAT_2.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(3);
-		category.setName("PROJECT PLANNING AND MANAGEMENT");
-		category.setDescription("all Electrical engeneering work");
-		category.setImageUrl("CAT_3.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(4);
-		category.setName("CATERING");
-		category.setDescription("all Plant hiring");
-		category.setImageUrl("CAT_4.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(5);
-		category.setName("ACCRIDITED TRAINING");
-		category.setDescription("all the traning services work");
-		category.setImageUrl("CAT_5.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(6);
-		category.setName("SOCIAL INVESTMENT");
-		category.setDescription("all social investing service");
-		category.setImageUrl("CAT_6.png");
-		categories.add(category);
-		
-		category = new Category();
-		category.setId(7);
-		category.setName("EVENTS MANAGEMENTS");
-		category.setDescription("all the events work");
-		category.setImageUrl("CAT_7.png");
-		categories.add(category);
-	}
 	@Override
 	public List<Category> list() {
-		// TODO Auto-generated method stub
-		return categories;
+		   return sessionFactory
+				    .getCurrentSession()
+				       .createQuery("FROM Category",Category.class)
+				               .getResultList();
 	}
+	
+	
 	@Override
-	public Category get(int id) {
-		for(Category category: categories) {
-			if(category.getId() == id) return category;
+	public Category get(int id){
+		try {
+		return sessionFactory
+				.getCurrentSession()
+				      .get(Category.class, Integer.valueOf(id));
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			return null;
 		}
-		return null;
 	}
+	
+	@Override
+	public boolean add(Category category) {
+		try {
+			//adding a service in the database
+			 sessionFactory
+					.getCurrentSession()
+					   .persist(category);
+		                      return true;
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+	
+	
+	@Override
+	public boolean update(Category category) {
+		try {
+			sessionFactory
+			  .getCurrentSession()
+			        .update(category);
+		                  return true;
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			return false;	
+		}
+	}
+	
+	
+	@Override
+	public boolean delete(Category category) {
+		category.setActive(false);
+		try {
+			sessionFactory
+			  .getCurrentSession()
+			        .update(category);
+		                 return true;
+		}catch(Exception ex) {
+			ex.printStackTrace();
+			return false;
+		}
+	}
+	
 
 }

@@ -10,6 +10,12 @@
   <servlet>
      <servlet-name>dispatcher</servlet-name>
      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+     
+     <!-- throwing the exception -->
+     <init-param>
+        <param-name>throwExceptionIfNoHandlerFound</param-name>
+        <param-value>true</param-value>
+     </init-param>
   </servlet>
   <!-- every url must pass through the front controller -->
  <servlet-mapping>

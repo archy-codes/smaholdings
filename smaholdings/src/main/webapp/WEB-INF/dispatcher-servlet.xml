@@ -10,8 +10,8 @@
 	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	
 	<!-- scanning the packages -->
-	<context:component-scan base-package="archy.wiz.smaholdings.controller" />
-	<context:component-scan base-package="archy.wiz.smaholdingsbackend.daoimpl" />
+	<context:component-scan base-package="archy.wiz.smaholdings" />
+	<context:component-scan base-package="archy.wiz.smaholdingsbackend" />
 	
 	<!-- resolving the views -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
