@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import archy.wiz.smaholdingsbackend.dao.CategoryDAO;
 import archy.wiz.smaholdingsbackend.dto.Category;
 
-
 @Repository("categoryDAO")
 @Transactional
 public class CategoryDAOImpl implements CategoryDAO {
@@ -38,6 +37,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 			return null;
 		}
 	}
+	
 	
 	@Override
 	public boolean add(Category category) {
@@ -80,6 +80,17 @@ public class CategoryDAOImpl implements CategoryDAO {
 			ex.printStackTrace();
 			return false;
 		}
+	}
+
+
+	@Override
+	public List<Category> listActiveCategories() {
+	  return sessionFactory
+			    .getCurrentSession()
+			       .createQuery("From Category WHERE Active = :Active" ,Category.class)
+			          .setParameter("Active", true)
+			             .getResultList();
+			      
 	}
 	
 

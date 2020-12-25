@@ -1,5 +1,7 @@
 package archy.wiz.smaholdingsbackend.dto;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Category {
+public class Category implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	public int getId() {
 		return id;
@@ -50,8 +57,9 @@ public class Category {
 
 	/*private fields
 	 * */
-	@Id
+	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	private int id;
 	private String name;
 	private String description;

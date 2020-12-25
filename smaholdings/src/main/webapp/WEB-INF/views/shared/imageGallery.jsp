@@ -13,7 +13,7 @@
            <img class="img-fluid" src="http://placehold.it/600x250" />
          </div> 
          <div class="col-lg-4 col-xl-4 mt-1">
-            <img class="img-fluid" src="http://placehold.it/450x395" />
+            <img id="imageGalleryImage" src="${images}/PRJEBE50BC78F.jpg" class="img-fluid"/>
          </div>                        
      </div>
 </div>

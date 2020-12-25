@@ -12,6 +12,8 @@ public interface ProjectDAO {
   boolean update(Project project);
   boolean delete(Project project);
   
+  List<Project> getProjectByParam(String param, int count);
+  
   List<Project> listActiveProjects();
   List<Project> listActiveProjectsByCategory(int categoryId);
   List<Project> listLatestActiveProjects(int count);

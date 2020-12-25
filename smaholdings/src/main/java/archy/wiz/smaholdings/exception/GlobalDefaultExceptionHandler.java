@@ -28,6 +28,7 @@ public class GlobalDefaultExceptionHandler {
 		return model;
 	}
 	
+	
 	@ExceptionHandler(Exception.class)
 	public ModelAndView handlerException(Exception ex) {
 		ModelAndView model = new ModelAndView("error");

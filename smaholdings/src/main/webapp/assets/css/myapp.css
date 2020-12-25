@@ -1,327 +1,905 @@
- 
- *{
-   margin:0;
-   padding:0;
- }
- html{
- height:100%;
- }
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
 body {
-  width:100%;
-  height:100%;
+	width: 100%;
 }
+
+#imageLogo {
+	width: 100%;
+	height: 185px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*nav social lonks*/
+.sociallinks .soci #social:hover {
+	color: red;
+}
+
+
+/*the carousel items*/
 .carousel-item {
-	height:80vh;
-	min-height:100%;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 80vh;
+	min-height: 100%;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-.icon{
-	margin-left:12%;
-}
-.top-header-about-section{
-	width:70%;
-	margin-left:15%;
-	background-color:rgb(0,0,0,0.5);
-	border-top:10px solid red;
+#adminProjectTable {
+	height: 50px;
+	width: 50px;
 }
 
+.ProjectTable {
+	height: 50px;
+	width: 50px;
+}
+/*Toggle Switch code*/
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+#imageGalleryImage {
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#about-us-landing-image {
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 0;
+	width: 100%;
+}
+#header-about{
+	width:100%;
+}
+
+#picture-about {
+	margin-top: 90px;
+}
+
+#project-pics {
+	margin-left: 300px;
+}
+
+.recent-projects-gallery {
+	height: 350px;
+	width: 700px;
+	margin-left: 40%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	display: none;
+}
+
+/* The slider */
+.slider {
+	background-color: blue;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+/*left and right start carousel arrows */
+.carousel-control-prev-icon:hover {
+	background-color: red;
+	color: white;
+	width:40px;
+	height:40px;
+}
+
+.carousel-control-prev-icon{
+	background-color:rgb(0,0,0);
+	border-radius:50%;
+	width:30px;
+	height:30px;
+}
+.carousel-control-next-icon{
+	background-color:rgb(0,0,0);
+	border-radius:50%;
+	width:30px;
+	height:30px;
+}
+
+.carousel-control-next-icon:hover {
+	background-color: red;
+	color: white;
+	width:40px;
+	height:40px;
+}
+/*left and right end carousel arrows */
+
+input:checked+.slider {
+	background-color: blue;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* overridden css */
+.help-block {
+	color: #ff0000;
+}
+
+#image-servces-section {
+	height: 100%;
+	width: 100%;
+}
+
+.icon {
+	margin-left: 12%;
+}
+
+.top-header-about-section {
+	width: 80%;
+	margin-left: 11%;
+	background-color: rgb(0, 0, 0, 0.3);
+}
 
 .portfolio-item {
-  margin-bottom: 30px;
+	margin-bottom: 10px;
 }
-.wrapper{
-	mix-height:100%;
+
+.wrapper {
+	height: 100%;
 	/*relative position
 	*/
+	position: relative;
 }
-.content{
-   
-   padding-bottom:100px;
+
+.content {
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
-#footer{
-	position:relative;
-	height:100px;
-	margin-top:-100px;
-	clear:both;
+
+#footer {
+	position: relative;
+	margin-top: 300;
+	bottom: 0;
+	width: 100%;
+	clear: both;
+}
+
+.clientlogo #client-logo {
+	width: 200px;
+	height: 200px;
 }
 
 .collapsible-link::before {
-  content: '';
-  width: 14px;
-  height: 2px;
-  background: white;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 1rem;
-  display: block;
-  transition: all 0.3s;
+	content: '';
+	width: 14px;
+	height: 2px;
+	background: grey;
+	position: absolute;
+	top: calc(50% - 1px);
+	right: 1rem;
+	display: block;
+	transition: all 0.3s;
 }
 /* Vertical line */
 .collapsible-link::after {
-  content: '';
-  width: 2px;
-  height: 14px;
-  background: white;
-  position: absolute;
-  top: calc(50% - 7px);
-  right: calc(1rem + 6px);
-  display: block;
-  transition: all 0.3s;
+	content: '';
+	width: 2px;
+	height: 14px;
+	background: grey;
+	position: absolute;
+	top: calc(50% - 7px);
+	right: calc(1rem + 6px);
+	display: block;
+	transition: all 0.3s;
 }
+
 #list-footer li {
-	margin-left:30%;
-	list-style:none;
+	margin-left: 30%;
+	list-style: none;
 }
-#footer-header{
-	margin-left:30%;
+
+#footer-header {
+	margin-left: 30%;
 }
-#list-footer li a{
-	list-style:none;
+
+#list-footer li a {
+	list-style: none;
 }
-.quick-link-items li a{
-	color:white;
+
+#list-footer li {
+	color: white;
+	list-style: none;
 }
-#list-footer li{
-	color:white;
-	list-style:none;
+
+#list-footer li .footer-icons {
+	height: 20px;
+	width: 20px;
+	margin-top: 10px;
 }
-#list-footer li .footer-icons{
-	height:20px;
-	width:20px;
-	margin-top:10px;
+
+#help-block {
+	color: #ff0000;
 }
-.help-block{
-	color:#ff0000;
-}
+
 .collapsible-link[aria-expanded='true']::after {
-  transform: rotate(90deg) translateX(-1px);
+	transform: rotate(90deg) translateX(-1px);
 }
 
 .collapsible-link[aria-expanded='true']::before {
-  transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
-#services-section{
-	 height:400px;
-	 background-image:url('http://placehold.it/1000x700');
-	  background-repeat: no-repeat;
-	  background-size: cover;
+
+/*services section background image*/
+
+#services-section {
+	height: 500px;
+	background-image: url('${images}/servies-main-picture.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-#services-section h1{
-  position:absolute;
-  bottom:200px;
-  left:150px;
-  
-}
-#services-section h3{
-  position:absolute;
-  bottom:200px;
-  left:150px;
-  
+/*login page */
+#loginsection {
+	background-image: url('${images}/logbackground.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-#services-section p{
-  position:absolute;
-  bottom:150px;
-  left:150px;
-  
-}
-#services-button{
-	position:absolute;
-	bottom:100px;
-	
-}
-#read-button{
-	position:absolute;
-	bottom:60px;
+#services-section h1 {
+	position: absolute;
+	bottom: 200px;
+	left: 150px;
 }
 
-#more-services-button{
-	border:2px solid blue;
+#services-section h2 {
+	position: absolute;
+	bottom: 200px;
+	left: 150px;
 }
-#more-services-button:hover{
-	background-color:rgb(0,0,255,0.5);
+
+#services-section p {
+	position: absolute;
+	bottom: 280px;
+	left: 150px;
+}
+
+/* service request qoute button */
+#services-button {
+	position: absolute;
+	bottom: 200px;
+}
+
+#read-button {
+	position: absolute;
+	bottom: 60px;
+}
+
+#more-services-button {
+	border: 2px solid blue;
+}
+
+#more-services-button:hover {
+	background-color: rgb(0, 0, 255, 0.5);
+	color: white;
+}
+
+#icon-images {
+	height: 35px;
+	width: 30px;
+}
+
+.containeer {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	transition: all .3s ease;
+	opacity: 0;
+	background-color: #eee;
+}
+
+.containeer:hover .overlay {
+	opacity: 0.7;
+}
+
+.text {
+	color: blue;
+	font-family: sans-serif;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	transform: translate(-30%, -30%);
+	font-size: 20px;
+}
+
+.overlayLeft {
+	height: 81%;
+	width: 0;
+	top: 0;
+	left: 10;
+}
+
+.containeer:hover .overlayLeft {
+	width: 90%;
+}
+
+#contact-form {
+	margin-bottom: 200px;
+}
+
+#section-contact {
+	margin-top: 100px;
+}
+
+#tab-border {
+	border: none;
+}
+
+#tab-border #tab-border-link {
+	border: none;
+}
+
+#tab-border-drop {
+	border: none;
+}
+
+#bad-border-list {
+	border: none;
+}
+
+#about-us-picture-background {
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(0.3px);
+}
+
+#top-header-about {
+	height: 40%;
+	margin-top: -70px;
+}
+
+#project-top-section-image {
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 5%;
+}
+
+/*project images list*/
+#dataTableImages {
+	width: 200px;
+	height: 100px;
+}
+/*blog images list*/
+#dataTableImagesBlog{
+	width:350px;
+	height:200px;
+}
+
+.blog-info {
+	width: 400px;
+	height: 300px;
+}
+
+#singlePageProjectImage {
+	width: 500px;;
+	height: 500%;
+}
+/* single blog page*/
+#singlePageProjectImage{
+	height:400px;
+	margin:50px 0px;
+}
+
+/*the info for the blog*/
+#info-blog-texts{
+	margin:top:20px;
+}
+
+
+#errorImage {
+	width: 150px;;
+	height: 150px;
+}
+
+.jumbotron {
+	background-color: rgb(0, 0, 0, 0.001);
+	border-bottom: 1px solid red;
+	padding-bottom: 20px;
+}
+
+#card-contact {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#image-about-us-landing-page {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#about-landing-picture {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#history-image {
+	width: 600px;
+	height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*more about us button*/
+#about_us_left_border {
+	border-left: 10px solid red;
+}
+
+#findMoreAboutUsButton {
+	border: 2px solid #008CBA;
+}
+
+#findMoreServicesUsButton {
+	border: 2px solid #008CBA;
+	color: blue;
+}
+.findMoreAboutUsButton-info #findMoreMoreButton{
+   	border: 2px solid #008CBA;
+}
+.findMoreAboutUsButton-info a:hover{
+	 background-color:rgba(0, 0, 0, 0.1);
+	 
+}
+#requestQoute{
+	background-color:rgba(0, 0, 255,0.02);
+}
+#requestQoute:hover{
+	border:1px solid green;
 	color:white;
 }
 
-#icon-images{
-	height:35px;
-	width:30px;
-}
-.containeer{
-	position:relative;
+
+#about-us-shadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
 
-.overlay{
-	position:absolute;
-	transition: all .3s ease;
-	opacity:0;
-	background-color:#eee;
+#services-section-home {
+	background-color: rgb(220, 220, 220, 0.01);
 }
 
-.containeer:hover .overlay{
-	opacity:0.7;
-}
-.text{
-	color:blue;
-	font-family:sans-serif;
-	position:absolute;
-	top:30%;
-	left:30%;
-	transform:translate(-30%,-30%);
-	font-size:20px;	
-}
-.overlayLeft{
-	height:81%;
-	width:0;
-	top:0;
-	left:10;
-	
-}
-.containeer:hover .overlayLeft{
-	width:90%;
-}
-#contact-form{
-	margin-bottom:200px;
+#our_best_services_border {
+	border-left: 10px solid red;
 }
 
-#section-contact{
-	 margin-top:100px;
+#panel-services-section-home {
+	border: 5px solid white;
 }
-#tab-border{
-	border:none;
+
+#imageForProjectCount {
+	background-color: grey;
+	height: 100px;
 }
-#tab-border #tab-border-link{
-	border:none;
+
+#testimonial-section {
+	background-color: rgb(0, 140, 186, 0, 3);
 }
-#tab-border-drop{
-	border:none;
+
+div.blog-card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-#bad-border-list{
-	border:none;
+
+.white-bg {
+	background: #ffffff !important;
 }
-#about-us-picture-background{
-	height:400px; 
-	background-image:url('http://placehold.it/1000x400');
-	 background-repeat: no-repeat;
-	  background-size: cover;
+
+.btn-success {
+	margin-top: 10px;
+	width: 100%;
 }
-#top-header-about{
- height:90%; 
- margin-top:-100px;
+
+div.blog-card-cat {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-#project-top-section-image{
-	height:400px;
-	 background-image:url('http://placehold.it/1000x700');
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  margin-bottom:5%;
+
+#recent-image-blog {
+	width: 100px;
+	height: 100px;
 }
-#dataTableImages{
-   	width:150px;
-   	height:100px;
+
+#findUsHere {
+	width: 50px;
+	height: 50px;
 }
-#singlePageProjectImage{
-	width:500px;;
-	height:500%;
+
+.findUsHere {
+	width: 300px;
 }
-#errorImage{
-	width:150px;;
-	height:150px;
+
+.findUsHere:hover {
+	color: red;
 }
-.jumbotron{
-	background-color:rgb(0,0,0,0.001);
-	border-bottom:1px solid red;
-	padding-bottom:20px;
+
+/* carousel description one */
+.carouseldescription {
+	position: absolute;
+	top: -380px;
+	left: 12%;
+	justify-content:center;
+	background-color:rgb(0,0,0,0.01);
+	width:800px;
+	height:200px;
 }
-#imageForOurRequest{
-	height:100px; 
-	background-image:url('http://placehold.it/1000x700');
-	  background-repeat: no-repeat;
-	  background-size: cover;
+.carouseldescription h2{
+   margin-top:50px;
 }
-#acodion-icon{
-	color:red;
+
+.carouseldescription .requestbutton:hover {
+	border: 2px solid green;
+	background-color: white;
+	color: black;
+	font-weight: bold;
 }
-#about_us_left_border{
-	border-left:10px solid red;
+
+#subscriptButton:hover {
+	color: white;
+	background-color: green;
+	border: none;
 }
-#findMoreAboutUsButton{
-	border:2px solid #008CBA;
-	color:blue;
+
+#card-blog {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-#findMoreServicesUsButton{
-	border:2px solid #008CBA;
-	color:blue;
+
+#manageprojectcard {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-#services-section-home{
-	background-color:rgb(220,220,220,0.2);
+
+#about-us-shadow-about-section {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
 }
-#our_best_services_border{
-	border-left:10px solid red;
+
+#logoBackend:hover {
+	border: 2px solid green;
+	color: white;
 }
-#panel-services-section-home{
+
+.sociallinks a, i:hover {
+	color: danger;
+}
+
+.client .card-client-img .img-responsive-logo {
+	height: 150px;
+	filter: grayscale(100%);
+	margin-bottom: 50px;
+}
+
+.archy .company-documents {
+	margin-top: 320px;
+}
+
+.archy .company-documents .archy-doc {
+	margin-left: 100px;
+}
+
+.gallery .img-responsive {
+	transition: 1s;
+	width: 230px;
+	height: 230px;
+	ackground-size: cover;
+	background-repeat: no-repeat;
+}
+
+.gallery .img-responsive:hover {
+	filter: grayscale(100%);
+	transform: scale(1.1);
+}
+
+.tab-pane .gallery {
+	margin-top: 75px;
+	width: 100%;
+}
+
+#recent-projects {
+	position: relative;
+	top: -300px;
+}
+
+#mbuluatchy {
+	position: relative;
+}
+
+#recent-projects #recent1 #recent .nav-pills .nav-item:hover {
+	backround-color: white;
+}
+#recent-projects #recent1 #recent .nav-pills{
+	margin-top:-350px;
+}
+
+#gallerybackground {
+	width: 100%;
+	height: 100%;
+}
+
+.gallery-info-header-top {
+	justify-content: center;
+}
+
+/*gallery section*/
+.gallery #gallerycont {
+	margin-left: 270px;
+	margin-top: -10px;
+	width:925px;
+}
+
+/* gallery images small images*/
+.gallery #gallerycont .img-responsive{
+	height:300px;
 	border:5px solid white;
 }
-#imageForProjectCount{
-	 background-color:grey;
-	 height:100px;
+#pills-tabContent .gallery{
+	 height:100%;
 }
-#testimonial-section{
-	background-color:rgb(0,140,186,0,3);
+.gallery{
+	filter:grayscale(100%);
 }
-div.blog-card{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+#blog-background-image {
+	background-image: url("${images}/blog.jpg");
+	height: 400px;
 }
-.white-bg{
-    background:#ffffff !important;
+
+.footer-link li {
+	display: inline-block;
+	margin: 6px;
 }
-.btn-success{
-	margin-top:10px;
-	width:100%;
+
+#topfooter-background-image {
+	background-image: url('${images}/contactuspicture.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 100%;
+}
+
+.contact-info-footer {
+	background-color: rgb(0, 111, 148);
+	color: white;
+	height: 100%;
+	width: 100%;
+}
+
+#client-logos {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.footertop {
+	height: 300px;
+}
+
+
+.service-card-header .service-card-ancor {
+	color: gray;
+}
+
+#our_best_projects {
+	border-left: 10px solid red;
+	margin-top: 80px;
+}
+
+.service-card-body .service-card-header .icon-image-services {
+	width: 50px;
+	height: 40px;
+	color: red;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+/*the hover for the landing latest projects and blogs*/
+.caption .blog-more-info:hover{
+	border:2px solid blue;
+	color:red;
+	height:30px;
 	
 }
-div.blog-card-cat{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.caption .blog-more-info a:hover{
+	color:green;
+	font-weight:bold;
+	text-decoration:none
 }
-.recent-image-blog{
-	width:300px;
+#projectSectionIcons{
+	height:400px;
+	
+}
+#mysection{
+	background-color:rgb(0,0,0,0.01);
+}
+
+#projectSectionIcons1 img{
+	margin-top:120px;	
+}
+
+#projectSectionIcons img{
+	margin-top:120px;
+}
+#projectSectionIcons1{
+	height:400px;
+}
+.navbar-toggler-icon{
+	background-color:white;
+}
+.navbar-toggler{
+	background-color:white;
+}
+
+
+
+/* side bar project */ 
+.side-bar-project-sec{
 	height:300px;
+	margin-top:150px;
+	background-color:rgb(202,62,61,0.7);
+}
+.side-bar-project-sec .sidebutton{
+	border:3px solid white;
+	margin-top:20px;
+	background-color:white;
+}
+.side-bar-project-sec .sidebutton:hover{
+	background-color:white;
+	color:black;
+	border:2px solid black;
+}
+.side-bar-menu-project{
+	margin-top:100px;
+}
+.side-bar-menu-project .side-bar-project-sec .soci{
+	justify-content:center;
+	justify-content:center;
+}
+.side-bar-menu-project .side-bar-project-sec .soci #social{
+	width:15px;
+	height:100px;
+	color:white;
+}
+.side-bar-menu-project .side-bar-project-sec .soci #social:hover{
+	color:red;
+}
+
+/* end of project side bar */
+.top-gallery-header{
+	position:absolute;
+	top:20px;
+	background-color:rgba(0, 0, 255,0.5);
+}
+/*the heading for the gallery section*/
+#recent-projects #recent1 #gallery-info{
+	position:absolute;
+	margin-top:-500px;	
+	background-color:rgb(0,0,0,0.3);
+}
+
+/*project-single page*/
+#project-single{
+	border:1px solid gray;
+}
+
+/**/
+#blogtable{
+	border-bottom:0px;
+}
+table.dataTable{
+	border:0;
+}
+#blogtable{
+	border:100px solid red;
+}
+
+#myblogsidebar{
+	margin-top:200px;
+}
+.movecategories{
+	margin-left:70px;
+}
+.my-social-handle a{
+	margin-left:100px;
+	display:inline-block;
+}
+
+#navbarResponsive .navbar-nav .link .nav-link:hover{
+	/*text-decoration: overline;*/
+	text-color:red;
+}
+
+.activemenu{
+		border-bottom:3px solid white;
+	
 }
 
 
 
 
 
+/*the gallery section for the sma application*/
+
+/*the section for the blog here- include the blog application pagenation*/
 
 
+/*then we need to add the application of the database and the the row data using the
+the angular javascript and the 
+*/
+SMA
 
+ 
 
+Business
 
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Enterprice--
+>

@@ -7,6 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -79,6 +84,13 @@ public class Project {
 	public void setAdminId(int adminId) {
 		this.adminId = adminId;
 	}
+
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 	
 	
 	@Override
@@ -104,16 +116,21 @@ public class Project {
 	  private int id;
 	  private String code;
 	  @Column(name="project_name")
+	  @NotBlank(message="please enter the project name!")
 	  private String projectName;
+	  @NotBlank(message="please enter the client name!")
 	  private String client;
 	  @Column(name="project_description")
+	  @NotBlank(message="please enter the project description!")
 	  private String description;
+	  @Min(value=1000, message="the project value cannot be less than R1000")
 	  private double value;
 	  @Column(name="contact_details")
+	  @NotBlank(message="please enter the contact details name!")
 	  private String contactDetails;
+	  @NotBlank(message="please enter the project status name!")
 	  private String status;
 	  @Column(name="is_active")
-	  @JsonIgnore
 	  private boolean active;
 	  @Column(name="category_id")
 	  @JsonIgnore
@@ -121,4 +138,10 @@ public class Project {
 	  @Column(name="admin_id")
 	  @JsonIgnore
 	  private int adminId;
+	
+	  @Transient
+	  private MultipartFile file;
+	  
+	  
+	  
 }

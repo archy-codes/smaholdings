@@ -109,6 +109,19 @@ public class ProjectDAOImpl implements ProjectDAO {
 				                        .setMaxResults(count)
 				                           .getResultList();
 	}
+	
+
+	@Override
+	public List<Project> getProjectByParam(String param, int count) {
+String query = "FROM Project WHERE active = true ORDER BY " + param + " DESC";
+		
+		return sessionFactory
+					.getCurrentSession()
+					.createQuery(query,Project.class)
+					.setFirstResult(0)
+					.setMaxResults(count)
+					.getResultList();
+	}
 
 	
 

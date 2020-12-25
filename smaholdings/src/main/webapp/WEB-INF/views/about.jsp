@@ -1,193 +1,145 @@
-   
-   <header>
-   
-   <div class="about-us-text text-center">
-         <div class="py-5" id="about-us-picture-background" >
-              <h1 style="margin-top:50px;">ABOUT US</h1>
-              <h5><strong>GET TO KNOW MORE INFOMATION ABOUT <span class="text-danger"><strong>SMA HOLDINGS.</strong></span></strong></h5>
-         </div>
-        </div>
-   
-      <div class=" col-lg-12 col-xl-12 top-header-about-section" id="top-header-about">
-           <div class=" row text-white py-5" >
-           
-            <div class="col-lg-3 col-xl-3 text-center ">
-              <h5>PROJECTS</h5>
-              <div class="text-center">
-                <i class="fas fa-building" style="width:20px; height:20px;"></i>
-                <h3>150</h3>
-              </div>
-            </div>
-            
-             <div class="col-lg-3 col-xl-3 text-center">
-              <h5>REVANUES</h5>
-              <div class="text-center">
-              <i class="fas fa-coins" style="width:20px; height:20px;"></i>
-              <h3><strong>R8,216000</strong></h3>
-              </div>
-              
-            </div>
-            
-             <div class="col-lg-3 col-xl-3 text-center">
-                <h5>HAPPY CLIENTS</h5>
-                <div class="text-center">
-                  <i class="fas fa-users" style="width:20px; height:20px;"></i>
-                  <h3>200</h3>
-                </div>
-            </div>
-            
-            
-            
-            <div class="col-lg-3 col-xl-3 text-center">
-              <h5>REVANUES</h5>
-              <div class="text-center">
-              <i class="fas fa-building" style="width:20px; height:20px;"></i>
-              <h3><strong>R8,216000</strong></h3>
-              </div>
-              
-            </div>
-            </div>
-       </div>
-</header> 
+
+<header id="header-about">
+	<div class="about-us-text text-center">
+		<!--this is the about picture section  -->
+		<div class="py-5" id="about-us-picture-background"
+			style="background-image:url('${images}/aboutsma.jpg'); filter:grayscale(100%);">
+			<h1 class="font-weight-bolder text-white " style="margin-top: 130px;">ABOUT
+				US.</h1>
+			<h5 class="font-weight-bold text-white">
+				GET TO KNOW MORE INFOMATION ABOUT <span
+					class="text-white font-weight-bold"> SMA BUSINESS
+					ENTERPRICE.</span>
+			</h5>
+		</div>
+	</div>
+	<!-- image about section end -->
+	
+	<!-- this is the project section -->
+
+	<!-- end project section -->
+</header>
+
+<div class="container" style="margin-top: 5%;">
+
+	<!-- about the company section header -->
+	<div class="row">
+		<div class="col-lg-12 col-xl-12 mb-5">
+			<div class="card border-secondary">
+				<div class="card-header border-0 bg-white">
+					<h4 class="text-info font-weight-bold">
+						<strong>SMA. HISTORY</strong>
+					</h4>
+				</div>
+				<div class="card-body text-secondary">
+					<p>
+						<span><strong>SMA Business Enterprice (Pty)Ltd</strong></span> is
+						a professional innovative company having a qualified Chief
+						Executive Officer within the company. The company was originated
+						in South Africa in 2013 and is owned with 100% BBE shareholding
+						making our company the black owned company.
+					</p>
+
+					<p>Our company provides quality services and reliability, for
+						providing good services to our clients and recipient. The company
+						was founded to assist all the Stakeholders (All forms of
+						Government, Private Sector, Parastatals, NGO's etc) to deliver
+						infrastructure projects and Supply of water, sewer, steel pipes
+						and fittings.</p>
+
+					<p>In addition, the company acts as a role model to aspiring
+						young engeneers, technicians, and all other technically qualified
+						persons in South Africa. SMA Business Enterprice(Pty)Ltd is a
+						company totally committed to the achievement and maintenance of
+						excellence. We create unique solutions, whilst also touching
+						everybody's lives.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 
-<div class="container" >
-  <div class="row">
-    <div class="col-lg-4 col-xl-4 " style="margin-top:6%;">
-      <a class="btn btn-lg btn-primary  btn-block" href="#"><strong>Request Quote</strong></a>
-    </div>
-  </div>
+	<!--about body section -->
+	<div class="row mt-5 mb-5">
+
+		<!-- bsuiness concept accodion -->
+		<div class="col-lg-12 col-xl-12 mb-5">
+			<h4 class=" text-info font-weight-bold">Company statements</h4>
+			<%@include file="./shared/accodion.jsp"%>
+		</div>
+
+        <%@include file="./shared/showProject.jsp" %>
+		<!-- end of business accodion concept -->
+		
+		<div class="col-lg-6 col-xl-6 mt-5">
+		  <h4 class="font-weight-bold text-info mt-5 mb-3">Social Responsibility</h4>
+			<div class="card border-muted">
+				<div class="card-header bg-white border-0">
+					<h6 class="font-weight-bold text-muted text-center ">Social Responsibility</h6>
+				</div>
+				<div class="card-body">
+					<p>sponsor the youth development services or programmes;<br/> To
+						give youth from poor or disadvantaged background bursaries or
+						learnerships to further their studies;<br/> To contribute on
+						communities through development, services and growth.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-6 col-xl-6 mt-5">
+		<h4 class="font-weight-bold text-info mt-5 mb-3">Staff development</h4>
+			<div class="card border-muted">
+				<div class="card-header bg-white border-0 ">
+					<h6 class="font-weight-bold text-center text-muted">Staff development</h6>
+				</div>
+				<div class="card-body">
+					<p>The business strives to employ efficient, effective and
+						competent staff of all races with greater emphasis on Previously
+						Disadvantaged Individuals including women, disabled people and
+						youth. The practice is committed to empower its staff and will
+						offer training and bursaries to deserving staff members where
+						necessary.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- about body section end -->
+
+	<div class="row">
+	   <div class="col-lg-12 col-xl-12 text-center mt-5 ">
+	      <h4 class="font-weight-bold text-info mt-5 mb-5">Sma Business
+				Enterprice Clients</h4>
+	   </div>
+	 <div class="col-lg-12 col-xl-12 border border-muted mb-5">
+	   <div class="row">
+		<div class="col-lg-3 col-xl-3 text-center client" id="client-logos">
+			<div class="card border-0 card-client-img">
+				<img src="${images}/public.jpeg" class="img-responsive-logo">
+			</div>
+		</div>
+		<div class="col-lg-3 col-xl-3 text-center client" id="client-logos">
+			<div class="card border-0 card-client-img">
+				<img src="${images}/polokwane.jpg" class="img-responsive-logo">
+			</div>
+		</div>
+		<div class="col-lg-3 col-xl-3 text-center client" id="client-logos">
+			<div class="card border-0 card-client-img">
+				<img src="${images}/ekurhuleni.jpg" class="img-responsive-logo">
+			</div>
+		</div>
+		<div class="col-lg-3 col-xl-3 text-center client" id="client-logos">
+			<div class="card border-0 card-client-img">
+				<img src="${images}/RAL.jpg" class="img-responsive-logo">
+			</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
 </div>
 
-
-
-<div class="container" style="margin-top:5%;">
- <h3 class="text-primary"><strong>HISTORY</strong></h3>
- <div class="row">
-    <div class="col-lg-6 col-xl-6" style="border-bottom:1px solid grey;">
-      <p><span><strong>SMA Business Enterprice (Pty)Ltd</strong></span> is a professional innovative company having
-      a qualified Chief Executive Officer within the company.
-      The company was originated in South Africa in 2013 and is owned  with 100% BBE
-      shareholding making our company the black owned company.
-      </p>
-      
-      <p>
-      Our company provides quality services and reliability, for providing good services
-      to our clients and recipient. The company was founded to assist all the Stakeholders
-      (All forms of Government, Private Sector, Parastatals, NGO's etc) to deliver infrastructure
-      projects and Supply of water, sewer, steel pipes and fittings.
-      </p>
-      
-      <p>
-      In addition, the company acts as a role model to aspiring young engeneers, technicians, and
-      all other technically qualified persons in South Africa. SMA Business Enterprice(Pty)Ltd is a 
-      company totally committed to the achievement and maintenance of excellence.
-      We create unique solutions, whilst also touching everybody's lives. 
-      </p>
-      
-    </div>
-    <div class="col-lg-6 col-xl-6">
-       <img src="http://placehold.it/550x300" />
-    </div>
-    </div> 
-</div>
-
-<div class="container"  style="margin-top:9%; ">
-  <div class="row pt-4">
-  
-  <!-- start accordion -->
-  <div class="col-lg-6">
-      <!-- Accordion -->
-      <div id="accordionExample" class="accordion shadow">
-
-        <!-- Accordion item 1 -->
-        <div class="card">
-          <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark text-uppercase collapsible-link py-2">Objectives</a></h6>
-          </div>
-          <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
-            <div class="card-body p-5">
-              <p class="font-weight-light m-0">
-                 To provide the best quality service to our clients at best rates.<br/>
-                 To act professionally and with integrity in all our business dealings.<br/>
-                 To promote black economic empowerment at all times.<br/>
-                 To create jobs opportunities for youth in South Africa.<br/>
-                 To be one of the leading development practice in the continent and abroad.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion item 3 -->
-        <div class="card">
-          <div id="headingThree" class="card-header bg-white shadow-sm border-0">
-            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark text-uppercase collapsible-link py-2">Values</a></h6>
-          </div>
-          <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
-            <div class="card-body p-5">
-              <p class="font-weight-light m-0">
-                 Quality<br/>
-                 Integrity and Trust<br/>
-                 Empowerment<br/>
-                 Partnership<br/>
-                 Excellence<br/>
-                 Communication<br/>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  <!-- end accrodion -->
-	 <div class="col-lg-3 col-sm-6 portfolio-item">
-        <div class="card text-center">
-          <div class="card-body ">
-            <i class="fab fa-tripadvisor"  style="height:107px;width:40px; color:Tomato;"></i>
-            <h4 class="card-title">
-              <a href="#">OUR VISION</a>
-            </h4>
-           <br/><p class="card-text">
-           To be a leading company that promotes good and quality, and provides better services of and 
-           international standard, this is revelant to the needs and aspirations South African people.
-           </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-3 col-sm-6 portfolio-item">
-        <div class="card text-center">
-          <div class="card-body">
-          <i class="fas fa-bullseye" style="height:107px;width:40px;color:Tomato;"></i>
-            <h4 class="card-title">
-              <a href="#">OUR MISSION</a>
-            </h4>
-            <br/><p class="card-text">
-            To complete all our projects in a higher quality, safety and on time;<br/><br/>
-            To contribute on growth and development of surrounding communities. 
-             </p>
-          </div>
-        </div>
-      </div>
-      
-  </div>
-  </div>
-      <div class="container" style="margin-top:150px; border-top:1px solid blue;">
-
-        <div class="section-title text-center mt-5">
-          <h3 class="text-primary">CHIEF EXECUTIVE OFFICER</h3>
-          <p>.Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="http://placehold.it/700x400" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <p>AC Mulaudzi is a qualified engineering technician having ND:Civil Engineering and busy with BTech</p>
-          </div>
-        </div>
-      </div>
 
 
 
