@@ -1,3 +1,4 @@
+<%@taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <div class="container-fluid" >
 	<div class="row">
 
@@ -29,6 +30,8 @@
 			style="height:150px;; width:100%; position:absolute; left:-30px; top:-79px;"/></a> -->    
       <div class=" collapse navbar-collapse " id="navbarResponsive">
         <ul class="navbar-nav" style="margin-left:250px;">
+        
+         <security:authorize access="isAnonymous()">
         <li id="home">
             <a class="nav-link text-white  font-weight-bold" href="${contextRoot}/home">HOME</a>
           </li>
@@ -50,6 +53,9 @@
           <li id="contact" class="link">
             <a class="nav-link text-white  font-weight-bold"  href="${contextRoot}/contact">CONTACT</a>
           </li>
+          </security:authorize>
+          
+          <security:authorize access="isAuthenticated()">
            <li  id="manageProjects" class="link">
             <a class="nav-link text-white font-weight-bold" href="${contextRoot}/manage/projects">MANAGE  PROJECTS</a>
           </li>
@@ -58,7 +64,9 @@
           </li> 
           <li id="login" class="link">
             <a class="nav-link text-white font-weight-bold" id="login"  href="${contextRoot}/login" >LOGIN</a>
-          </li>          
+          </li>    
+          
+           </security:authorize>    
         </ul>
         </div>
   </nav>
